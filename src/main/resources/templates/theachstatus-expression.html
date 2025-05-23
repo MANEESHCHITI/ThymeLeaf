@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<table border="1">
+	<thead>
+			<tr>
+				<td>Count</td>
+				<td>Index</td>
+				<td>First</td>
+				<td>Last</td>
+				<td>Even</td>
+				<td>Odd</td>
+				<td>Size</td>
+				<td>ID</td>
+				<td>FirstName</td>
+				<td>LastName</td>
+				<td>Age</td>
+			</tr>
+	</thead>
+	<tbody>
+		<tr th:each="users,userStat:${userattribute}">
+			<td th:text="${userStat.count}"> </td>
+			<td th:text="${userStat.index}"> </td>
+			<td th:text="${userStat.first}"> </td>
+			<td th:text="${userStat.last}"> </td>
+			<td th:text="${userStat.even}"> </td>
+			<td th:text="${userStat.odd}"> </td>
+			<td th:text="${userStat.size}"> </td>
+			<td th:text="${users.id}"> </td>
+			<td th:text="${users.firstName}"> </td>
+			<td th:text="${users.lastName}"> </td>
+			<td th:text="${users.age}"> </td>
+			
+		</tr>
+	</tbody>
+	</table>
+</body>
+</html>

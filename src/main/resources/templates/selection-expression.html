@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+
+</head>
+<body>
+
+
+<!-- in the  ${userattribute} we can also write in the inverted columns -->
+		<div th:object=${userattribute}>
+		
+		<p>Name :<strong th:text=*{id}></strong></p>
+		<p>FirstName :<strong th:text=*{firstName}></strong></p>
+		<p>LastName :<strong th:text=*{lastName}></strong></p>
+		<p>Age :<strong th:text=*{age}></strong></p>
+		</div>
+</body>
+</html>

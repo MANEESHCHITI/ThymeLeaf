@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html
+xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3 th:text="${personattribute.name}"> </h3>
+	<div th:switch="${personattribute.role}">
+		<p th:case=" 'ADMIN' ">Person is a admin </p>
+		<p th:case=" 'USER' ">Person is a user </p>
+		<p th:case="*">Person is a other </p>
+	</div>
+</body>
+</html>
